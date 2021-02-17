@@ -1,0 +1,3154 @@
+{
+	"info": {
+		"_postman_id": "586e85da-ec18-404d-b2c8-5b253f62e823",
+		"name": "Swagger svt-product project API",
+		"description": "This is list api for svt-product project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "{code}",
+					"item": [
+						{
+							"name": "Get Category by code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categories/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code category"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -36941985,\n \"data\": {\n  \"name\": \"ipsum ea\",\n  \"active\": false,\n  \"code\": \"cupidatat labore\",\n  \"created_at\": \"exercitation \",\n  \"description\": \"est\",\n  \"id\": \"consequat tempor cillum\",\n  \"level\": -48854878,\n  \"order\": 33608929,\n  \"parent_code\": \"consectetur deser\",\n  \"show_on_horizontal_menu\": false,\n  \"slug\": \"non sit ullamco sed\",\n  \"status\": false,\n  \"updated_at\": \"ut aliquip in consequat dolor\",\n  \"web_banner\": \"ea incididunt fugiat\"\n },\n \"message\": \"d\",\n \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Update category  by code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code of category"
+										}
+									]
+								},
+								"description": "Update category  by code"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -36941985,\n \"data\": {\n  \"name\": \"ipsum ea\",\n  \"active\": false,\n  \"code\": \"cupidatat labore\",\n  \"created_at\": \"exercitation \",\n  \"description\": \"est\",\n  \"id\": \"consequat tempor cillum\",\n  \"level\": -48854878,\n  \"order\": 33608929,\n  \"parent_code\": \"consectetur deser\",\n  \"show_on_horizontal_menu\": false,\n  \"slug\": \"non sit ullamco sed\",\n  \"status\": false,\n  \"updated_at\": \"ut aliquip in consequat dolor\",\n  \"web_banner\": \"ea incididunt fugiat\"\n },\n \"message\": \"d\",\n \"success\": false\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update category status by code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"active\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories/:code/status",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories",
+										":code",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code of category"
+										}
+									]
+								},
+								"description": "update status for category"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"active\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"active\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"active\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/categories/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"categories",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get List Category",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/categories?search=<string>&level=<string>&level=<string>&page=<integer>&page_size=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "<string>",
+									"description": "search  by code or name"
+								},
+								{
+									"key": "level",
+									"value": "<string>",
+									"description": "level"
+								},
+								{
+									"key": "level",
+									"value": "<string>",
+									"description": "level"
+								},
+								{
+									"key": "page",
+									"value": "<integer>",
+									"description": "page number for unit"
+								},
+								{
+									"key": "page_size",
+									"value": "<integer>",
+									"description": "page size each page"
+								}
+							]
+						},
+						"description": "Get List Category"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categories?search=<string>&level=<string>&level=<string>&page=<integer>&page_size=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "<string>"
+										},
+										{
+											"key": "level",
+											"value": "<string>"
+										},
+										{
+											"key": "level",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										},
+										{
+											"key": "page_size",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": 92762537,\n \"data\": [\n  {\n   \"name\": \"\",\n   \"active\": false,\n   \"code\": \"cillum ipsum\",\n   \"created_at\": \"nostrud amet\",\n   \"description\": \"ea\",\n   \"id\": \"Ut pariatur quis amet nulla\",\n   \"level\": 12200663,\n   \"order\": -27473774,\n   \"parent_code\": \"minim qui sunt cillum\",\n   \"show_on_horizontal_menu\": true,\n   \"slug\": \"sint laboris veniam\",\n   \"status\": false,\n   \"updated_at\": \"elit culpa officia ullamco\",\n   \"web_banner\": \"sunt aute ipsum in\"\n  },\n  {\n   \"name\": \"enim consequat\",\n   \"active\": true,\n   \"code\": \"cillum\",\n   \"created_at\": \"enim commodo ullamco\",\n   \"description\": \"dolor\",\n   \"id\": \"incididunt aliqua\",\n   \"level\": -5606035,\n   \"order\": -85298667,\n   \"parent_code\": \"nulla in Excepteur eu\",\n   \"show_on_horizontal_menu\": false,\n   \"slug\": \"eu ut esse in\",\n   \"status\": false,\n   \"updated_at\": \"elit incididunt quis sed\",\n   \"web_banner\": \"nisi ex elit esse\"\n  }\n ],\n \"message\": \"enim in\",\n \"page\": 80884354,\n \"page_size\": -31582776,\n \"success\": true,\n \"total\": 84544628\n}"
+						},
+						{
+							"name": "Not Acceptable",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/categories?search=<string>&level=<string>&level=<string>&page=<integer>&page_size=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "<string>"
+										},
+										{
+											"key": "level",
+											"value": "<string>"
+										},
+										{
+											"key": "level",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										},
+										{
+											"key": "page_size",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Category",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "create new Category"
+					},
+					"response": [
+						{
+							"name": "Not Acceptable",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -36941985,\n \"data\": {\n  \"name\": \"ipsum ea\",\n  \"active\": false,\n  \"code\": \"cupidatat labore\",\n  \"created_at\": \"exercitation \",\n  \"description\": \"est\",\n  \"id\": \"consequat tempor cillum\",\n  \"level\": -48854878,\n  \"order\": 33608929,\n  \"parent_code\": \"consectetur deser\",\n  \"show_on_horizontal_menu\": false,\n  \"slug\": \"non sit ullamco sed\",\n  \"status\": false,\n  \"updated_at\": \"ut aliquip in consequat dolor\",\n  \"web_banner\": \"ea incididunt fugiat\"\n },\n \"message\": \"d\",\n \"success\": false\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\",\n    \"active\": \"<boolean>\",\n    \"description\": \"<string>\",\n    \"order\": \"<integer>\",\n    \"parent_code\": \"<string>\",\n    \"show_on_horizontal_menu\": \"<boolean>\",\n    \"status\": \"<boolean>\",\n    \"web_banner\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "{code}",
+					"item": [
+						{
+							"name": "Get product by Code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/products/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) product code"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/products/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": 78547586,\n \"data\": {},\n \"message\": \"Ut quis sed minim\",\n \"metaData\": {\n  \"page\": 79112684,\n  \"pageSize\": -88900648,\n  \"total\": -53079353\n },\n \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Product by code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"in laborum aliquip\",\n        \"name\": \"dolore magna qui ex\"\n    },\n    \"unit\": {\n        \"factor\": -69336435.14956613,\n        \"primary_unit\": \"minim sed\",\n        \"secondary_unit\": \"consequat sit\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"veniam velit ad nostrud\",\n            \"url\": \"esse\"\n        },\n        {\n            \"name\": \"ex ipsum\",\n            \"url\": \"ad labore Excepteur commodo\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"ut aliqua in\",\n        \"listing_url\": \"commodo Ut dolor dolore\",\n        \"name\": \"sint ex aliqua\",\n        \"thumbnail_url\": \"dolore voluptate non\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"labore culpa enim exercitation\",\n            \"listing_url\": \"anim officia\",\n            \"name\": \"sunt aute\",\n            \"thumbnail_url\": \"non deserunt est dolor\"\n        },\n        {\n            \"detail_url\": \"fugiat labore adipisicing\",\n            \"listing_url\": \"non dolor ut aliqua\",\n            \"name\": \"consequat dolore Excepteur incididunt\",\n            \"thumbnail_url\": \"id minim dolore enim\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": -21207431.24737224,\n            \"unit\": \"velit\"\n        },\n        {\n            \"quantity\": 55083855.832506776,\n            \"unit\": \"eu nostrud Except\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) product code"
+										}
+									]
+								},
+								"description": "update information for Product"
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -47835966,\n \"data\": {\n  \"category_code\": \"non sit tempor\",\n  \"name\": \"labore irure in\",\n  \"supplier\": {\n   \"code\": \"eu officia\",\n   \"name\": \"aliqua qui aliquip ut\"\n  },\n  \"unit\": {\n   \"factor\": 3498596.4192287177,\n   \"primary_unit\": \"Duis voluptate\",\n   \"secondary_unit\": \"veniam non enim voluptate\"\n  },\n  \"barcode\": \"do ad aliquip laboris eu\",\n  \"barcode_image_url\": \"cupidatat Duis\",\n  \"category\": {\n   \"name\": \"qui in magna\",\n   \"active\": false,\n   \"code\": \"exercitation ad veniam sint\",\n   \"created_at\": \"dolor\",\n   \"description\": \"dolore pariatur\",\n   \"id\": \"Ut aliqua minim\",\n   \"level\": -36902708,\n   \"order\": 94591803,\n   \"parent_code\": \"ipsum\",\n   \"show_on_horizontal_menu\": true,\n   \"slug\": \"magna consequat labore\",\n   \"status\": true,\n   \"updated_at\": \"occaecat eiusmod nulla\",\n   \"web_banner\": \"elit veniam enim tempor\"\n  },\n  \"code\": \"in do\",\n  \"created_at\": \"nisi\",\n  \"criteria\": [\n   {\n    \"name\": \"enim s\",\n    \"url\": \"irure amet ad velit dolor\"\n   },\n   {\n    \"name\": \"culpa anim tem\",\n    \"url\": \"enim id\"\n   }\n  ],\n  \"description\": \"Excepteur adipisicing\",\n  \"id\": \"quis dolore irure et cillu\",\n  \"image\": {\n   \"detail_url\": \"adipisicing\",\n   \"listing_url\": \"pariatur proident\",\n   \"name\": \"dolore ex id sint sunt\",\n   \"thumbnail_url\": \"labore\"\n  },\n  \"images\": [\n   {\n    \"detail_url\": \"elit Ut eiusmod\",\n    \"listing_url\": \"dolore amet anim aute\",\n    \"name\": \"dolore Duis voluptate aliqua\",\n    \"thumbnail_url\": \"id sit\"\n   },\n   {\n    \"detail_url\": \"nostrud \",\n    \"listing_url\": \"nostrud minim proident aute est\",\n    \"name\": \"sed nostrud in\",\n    \"thumbnail_url\": \"exercitation Duis Lorem\"\n   }\n  ],\n  \"keywords\": [\n   \"tempor voluptate pr\",\n   \"occaecat anim laborum\"\n  ],\n  \"options\": [\n   {\n    \"quantity\": -21736607.3814667,\n    \"unit\": \"esse sit reprehenderit\"\n   },\n   {\n    \"quantity\": 89491860.6606245,\n    \"unit\": \"in eiusmod Duis elit\"\n   }\n  ],\n  \"order\": -98210660,\n  \"purchased_products_together\": [\n   \"incididunt cupida\",\n   \"reprehenderit laboris\"\n  ],\n  \"purchased_products_together_objects\": [\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   },\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   }\n  ],\n  \"related_products\": [\n   \"ullamco voluptate ea\",\n   \"Lorem qui\"\n  ],\n  \"related_products_objects\": [\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   },\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   }\n  ],\n  \"short_description\": \"et est dolor\",\n  \"slug\": \"eu\",\n  \"status\": true,\n  \"tag\": [\n   \"dolor ad cillum\",\n   \"ullamco veniam\"\n  ],\n  \"updated_at\": \"deserunt ad aliquip in\"\n },\n \"message\": \"cupidatat\",\n \"success\": false\n}"
+								}
+							]
+						},
+						{
+							"name": "Update criteria for product",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"criteria\": [\n        {\n            \"name\": \"ut incididunt Duis ex fugiat\",\n            \"url\": \"magna\"\n        },\n        {\n            \"name\": \"id minim Excepteur\",\n            \"url\": \"exe\"\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:code/criteria",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":code",
+										"criteria"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code of product"
+										}
+									]
+								},
+								"description": "update criteria for product"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"criteria\": [\n        {\n            \"name\": \"laborum tempor reprehenderit officia\",\n            \"url\": \"fugiat dolore\"\n        },\n        {\n            \"name\": \"mollit\",\n            \"url\": \"est amet ex commodo dolor\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/criteria",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"criteria"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"criteria\": [\n        {\n            \"name\": \"laborum tempor reprehenderit officia\",\n            \"url\": \"fugiat dolore\"\n        },\n        {\n            \"name\": \"mollit\",\n            \"url\": \"est amet ex commodo dolor\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/criteria",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"criteria"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"criteria\": [\n        {\n            \"name\": \"laborum tempor reprehenderit officia\",\n            \"url\": \"fugiat dolore\"\n        },\n        {\n            \"name\": \"mollit\",\n            \"url\": \"est amet ex commodo dolor\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/criteria",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"criteria"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update product images by id",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"images\": [\n        {\n            \"detail_url\": \"et\",\n            \"listing_url\": \"do cupidatat mollit anim id\",\n            \"name\": \"adipisicing ea tempor\",\n            \"thumbnail_url\": \"ex\"\n        },\n        {\n            \"detail_url\": \"ullamco id in\",\n            \"listing_url\": \"sit eu officia\",\n            \"name\": \"occaecat\",\n            \"thumbnail_url\": \"ut anim dolor\"\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:code/images",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":code",
+										"images"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code of product"
+										}
+									]
+								},
+								"description": "Update product images by id"
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"images\": [\n        {\n            \"detail_url\": \"ea dolor nisi\",\n            \"listing_url\": \"est\",\n            \"name\": \"sunt eu in\",\n            \"thumbnail_url\": \"consequat eiusmod qui ut\"\n        },\n        {\n            \"detail_url\": \"minim nisi amet sit irure\",\n            \"listing_url\": \"sunt Duis in quis\",\n            \"name\": \"occaecat quis commodo\",\n            \"thumbnail_url\": \"qui nostrud e\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/images",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"images"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"images\": [\n        {\n            \"detail_url\": \"ea dolor nisi\",\n            \"listing_url\": \"est\",\n            \"name\": \"sunt eu in\",\n            \"thumbnail_url\": \"consequat eiusmod qui ut\"\n        },\n        {\n            \"detail_url\": \"minim nisi amet sit irure\",\n            \"listing_url\": \"sunt Duis in quis\",\n            \"name\": \"occaecat quis commodo\",\n            \"thumbnail_url\": \"qui nostrud e\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/images",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"images"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"images\": [\n        {\n            \"detail_url\": \"ea dolor nisi\",\n            \"listing_url\": \"est\",\n            \"name\": \"sunt eu in\",\n            \"thumbnail_url\": \"consequat eiusmod qui ut\"\n        },\n        {\n            \"detail_url\": \"minim nisi amet sit irure\",\n            \"listing_url\": \"sunt Duis in quis\",\n            \"name\": \"occaecat quis commodo\",\n            \"thumbnail_url\": \"qui nostrud e\"\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/images",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"images"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update product status by code",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products/:code/status",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":code",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) code of product"
+										}
+									]
+								},
+								"description": "update status for category"
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/products/:code/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"products",
+												":code",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Filter users and paging",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/products?search=<string>&page=<integer>&page_size=<integer>&list_code=<string>&category_code=<string>&supplier_code=<string>&status=<boolean>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "<string>",
+									"description": "search  by code or name"
+								},
+								{
+									"key": "page",
+									"value": "<integer>",
+									"description": "page number for unit"
+								},
+								{
+									"key": "page_size",
+									"value": "<integer>",
+									"description": "page size each page"
+								},
+								{
+									"key": "list_code",
+									"value": "<string>",
+									"description": "list product code-example a,b,c"
+								},
+								{
+									"key": "category_code",
+									"value": "<string>",
+									"description": "category_code"
+								},
+								{
+									"key": "supplier_code",
+									"value": "<string>",
+									"description": "supplier_code"
+								},
+								{
+									"key": "status",
+									"value": "<boolean>",
+									"description": "status"
+								}
+							]
+						},
+						"description": "filter list user and paging filtered"
+					},
+					"response": [
+						{
+							"name": "Not Acceptable",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products?search=<string>&page=<integer>&page_size=<integer>&list_code=<string>&category_code=<string>&supplier_code=<string>&status=<boolean>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										},
+										{
+											"key": "page_size",
+											"value": "<integer>"
+										},
+										{
+											"key": "list_code",
+											"value": "<string>"
+										},
+										{
+											"key": "category_code",
+											"value": "<string>"
+										},
+										{
+											"key": "supplier_code",
+											"value": "<string>"
+										},
+										{
+											"key": "status",
+											"value": "<boolean>"
+										}
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products?search=<string>&page=<integer>&page_size=<integer>&list_code=<string>&category_code=<string>&supplier_code=<string>&status=<boolean>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										},
+										{
+											"key": "page_size",
+											"value": "<integer>"
+										},
+										{
+											"key": "list_code",
+											"value": "<string>"
+										},
+										{
+											"key": "category_code",
+											"value": "<string>"
+										},
+										{
+											"key": "supplier_code",
+											"value": "<string>"
+										},
+										{
+											"key": "status",
+											"value": "<boolean>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -58491419,\n \"data\": [\n  {\n   \"category_code\": \"laborum lab\",\n   \"name\": \"velit\",\n   \"supplier\": {\n    \"code\": \"ut reprehenderit\",\n    \"name\": \"fugiat reprehenderit\"\n   },\n   \"unit\": {\n    \"factor\": 25529558.573935375,\n    \"primary_unit\": \"qui amet dolore sed\",\n    \"secondary_unit\": \"nisi Lo\"\n   },\n   \"barcode\": \"nulla esse laboris tempor\",\n   \"barcode_image_url\": \"amet Ut\",\n   \"category\": {\n    \"name\": \"labore exercitation magna\",\n    \"active\": true,\n    \"code\": \"consectetur esse in officia\",\n    \"created_at\": \"occaecat Excepteur enim\",\n    \"description\": \"nostrud\",\n    \"id\": \"velit ad non\",\n    \"level\": -67358861,\n    \"order\": -9539385,\n    \"parent_code\": \"elit Duis ea\",\n    \"show_on_horizontal_menu\": false,\n    \"slug\": \"culpa fugiat\",\n    \"status\": false,\n    \"updated_at\": \"nostrud pariatur sint voluptate\",\n    \"web_banner\": \"proident in\"\n   },\n   \"code\": \"deserunt sint\",\n   \"created_at\": \"cupidatat ut voluptate aliqua\",\n   \"criteria\": [\n    {\n     \"name\": \"proident mollit Ut\",\n     \"url\": \"proident labore ipsum laborum officia\"\n    },\n    {\n     \"name\": \"do esse dolor\",\n     \"url\": \"elit eu\"\n    }\n   ],\n   \"description\": \"id non proident\",\n   \"id\": \"deserunt incididunt consectet\",\n   \"image\": {\n    \"detail_url\": \"cillum aute deserun\",\n    \"listing_url\": \"commodo mini\",\n    \"name\": \"adipisicing officia exercitation sunt amet\",\n    \"thumbnail_url\": \"veniam occaecat\"\n   },\n   \"images\": [\n    {\n     \"detail_url\": \"ut\",\n     \"listing_url\": \"non laborum sed deserunt\",\n     \"name\": \"incididunt deserunt proident\",\n     \"thumbnail_url\": \"labore id\"\n    },\n    {\n     \"detail_url\": \"amet minim proident commodo veniam\",\n     \"listing_url\": \"amet labore dolor\",\n     \"name\": \"laboris proident ullamco\",\n     \"thumbnail_url\": \"velit officia dolore\"\n    }\n   ],\n   \"keywords\": [\n    \"Excepteur\",\n    \"labo\"\n   ],\n   \"options\": [\n    {\n     \"quantity\": 71099043.69371128,\n     \"unit\": \"aliquip nisi ex\"\n    },\n    {\n     \"quantity\": -61999252.1689861,\n     \"unit\": \"ullamco dolor nisi dolor ad\"\n    }\n   ],\n   \"order\": -8579146,\n   \"purchased_products_together\": [\n    \"s\",\n    \"aliquip sint\"\n   ],\n   \"purchased_products_together_objects\": [\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    },\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    }\n   ],\n   \"related_products\": [\n    \"minim et labore magna\",\n    \"cillum consectetur et\"\n   ],\n   \"related_products_objects\": [\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    },\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    }\n   ],\n   \"short_description\": \"irure qui\",\n   \"slug\": \"ut in\",\n   \"status\": true,\n   \"tag\": [\n    \"dolor o\",\n    \"sed ex\"\n   ],\n   \"updated_at\": \"deserunt exercitation pariatur\"\n  },\n  {\n   \"category_code\": \"in ut deserunt voluptate aliquip\",\n   \"name\": \"pr\",\n   \"supplier\": {\n    \"code\": \"Lorem laboris occaecat\",\n    \"name\": \"voluptate elit ex Lorem sed\"\n   },\n   \"unit\": {\n    \"factor\": 49937072.43387258,\n    \"primary_unit\": \"in velit sunt amet\",\n    \"secondary_unit\": \"aute mollit amet\"\n   },\n   \"barcode\": \"dolor veniam sint non esse\",\n   \"barcode_image_url\": \"officia\",\n   \"category\": {\n    \"name\": \"in est dolor\",\n    \"active\": true,\n    \"code\": \"non elit ex sit\",\n    \"created_at\": \"pariatur sint incididunt\",\n    \"description\": \"do et ad\",\n    \"id\": \"elit et pariatur\",\n    \"level\": 97670769,\n    \"order\": -13084002,\n    \"parent_code\": \"\",\n    \"show_on_horizontal_menu\": true,\n    \"slug\": \"D\",\n    \"status\": true,\n    \"updated_at\": \"et sint nulla ullamco\",\n    \"web_banner\": \"consequat id\"\n   },\n   \"code\": \"in cupidatat ea laborum\",\n   \"created_at\": \"pariatur exercitation\",\n   \"criteria\": [\n    {\n     \"name\": \"adipisi\",\n     \"url\": \"veniam\"\n    },\n    {\n     \"name\": \"eiusmod sunt ea incididunt\",\n     \"url\": \"aliquip adipisicing pariatur\"\n    }\n   ],\n   \"description\": \"velit laboris\",\n   \"id\": \"Excepteur anim\",\n   \"image\": {\n    \"detail_url\": \"tempor\",\n    \"listing_url\": \"do anim adipisicing\",\n    \"name\": \"irure est occa\",\n    \"thumbnail_url\": \"aute eiusmod\"\n   },\n   \"images\": [\n    {\n     \"detail_url\": \"non dolor incididunt in ullamco\",\n     \"listing_url\": \"deserunt nostrud\",\n     \"name\": \"dolore id adipisicing\",\n     \"thumbnail_url\": \"in commodo nulla id\"\n    },\n    {\n     \"detail_url\": \"consequat aliquip labore minim mollit\",\n     \"listing_url\": \"dolor laboris\",\n     \"name\": \"eiusmod non labore Ut\",\n     \"thumbnail_url\": \"ullamco inc\"\n    }\n   ],\n   \"keywords\": [\n    \"Lorem ex magna\",\n    \"Duis culpa cillum dolore labore\"\n   ],\n   \"options\": [\n    {\n     \"quantity\": 59047889.83973059,\n     \"unit\": \"aliqua est cupidatat do\"\n    },\n    {\n     \"quantity\": -15409915.917054743,\n     \"unit\": \"tempor non qui laborum sed\"\n    }\n   ],\n   \"order\": 74014704,\n   \"purchased_products_together\": [\n    \"tempor Duis\",\n    \"pariatur qui cillum minim\"\n   ],\n   \"purchased_products_together_objects\": [\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    },\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    }\n   ],\n   \"related_products\": [\n    \"esse eu labore tempor\",\n    \"sit est\"\n   ],\n   \"related_products_objects\": [\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    },\n    {\n     \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n    }\n   ],\n   \"short_description\": \"velit ullamco pariatur et tempor\",\n   \"slug\": \"nulla Ut\",\n   \"status\": false,\n   \"tag\": [\n    \"culpa\",\n    \"consectetur et reprehenderit Excepteur fugiat\"\n   ],\n   \"updated_at\": \"reprehenderit occaecat non\"\n  }\n ],\n \"message\": \"est enim adipisicing ex\",\n \"page\": -63276866,\n \"page_size\": 22863850,\n \"success\": false,\n \"total\": -78056657\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Product",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"in laborum aliquip\",\n        \"name\": \"dolore magna qui ex\"\n    },\n    \"unit\": {\n        \"factor\": -69336435.14956613,\n        \"primary_unit\": \"minim sed\",\n        \"secondary_unit\": \"consequat sit\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"veniam velit ad nostrud\",\n            \"url\": \"esse\"\n        },\n        {\n            \"name\": \"ex ipsum\",\n            \"url\": \"ad labore Excepteur commodo\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"ut aliqua in\",\n        \"listing_url\": \"commodo Ut dolor dolore\",\n        \"name\": \"sint ex aliqua\",\n        \"thumbnail_url\": \"dolore voluptate non\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"labore culpa enim exercitation\",\n            \"listing_url\": \"anim officia\",\n            \"name\": \"sunt aute\",\n            \"thumbnail_url\": \"non deserunt est dolor\"\n        },\n        {\n            \"detail_url\": \"fugiat labore adipisicing\",\n            \"listing_url\": \"non dolor ut aliqua\",\n            \"name\": \"consequat dolore Excepteur incididunt\",\n            \"thumbnail_url\": \"id minim dolore enim\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": -21207431.24737224,\n            \"unit\": \"velit\"\n        },\n        {\n            \"quantity\": 55083855.832506776,\n            \"unit\": \"eu nostrud Except\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "create new Product"
+					},
+					"response": [
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -47835966,\n \"data\": {\n  \"category_code\": \"non sit tempor\",\n  \"name\": \"labore irure in\",\n  \"supplier\": {\n   \"code\": \"eu officia\",\n   \"name\": \"aliqua qui aliquip ut\"\n  },\n  \"unit\": {\n   \"factor\": 3498596.4192287177,\n   \"primary_unit\": \"Duis voluptate\",\n   \"secondary_unit\": \"veniam non enim voluptate\"\n  },\n  \"barcode\": \"do ad aliquip laboris eu\",\n  \"barcode_image_url\": \"cupidatat Duis\",\n  \"category\": {\n   \"name\": \"qui in magna\",\n   \"active\": false,\n   \"code\": \"exercitation ad veniam sint\",\n   \"created_at\": \"dolor\",\n   \"description\": \"dolore pariatur\",\n   \"id\": \"Ut aliqua minim\",\n   \"level\": -36902708,\n   \"order\": 94591803,\n   \"parent_code\": \"ipsum\",\n   \"show_on_horizontal_menu\": true,\n   \"slug\": \"magna consequat labore\",\n   \"status\": true,\n   \"updated_at\": \"occaecat eiusmod nulla\",\n   \"web_banner\": \"elit veniam enim tempor\"\n  },\n  \"code\": \"in do\",\n  \"created_at\": \"nisi\",\n  \"criteria\": [\n   {\n    \"name\": \"enim s\",\n    \"url\": \"irure amet ad velit dolor\"\n   },\n   {\n    \"name\": \"culpa anim tem\",\n    \"url\": \"enim id\"\n   }\n  ],\n  \"description\": \"Excepteur adipisicing\",\n  \"id\": \"quis dolore irure et cillu\",\n  \"image\": {\n   \"detail_url\": \"adipisicing\",\n   \"listing_url\": \"pariatur proident\",\n   \"name\": \"dolore ex id sint sunt\",\n   \"thumbnail_url\": \"labore\"\n  },\n  \"images\": [\n   {\n    \"detail_url\": \"elit Ut eiusmod\",\n    \"listing_url\": \"dolore amet anim aute\",\n    \"name\": \"dolore Duis voluptate aliqua\",\n    \"thumbnail_url\": \"id sit\"\n   },\n   {\n    \"detail_url\": \"nostrud \",\n    \"listing_url\": \"nostrud minim proident aute est\",\n    \"name\": \"sed nostrud in\",\n    \"thumbnail_url\": \"exercitation Duis Lorem\"\n   }\n  ],\n  \"keywords\": [\n   \"tempor voluptate pr\",\n   \"occaecat anim laborum\"\n  ],\n  \"options\": [\n   {\n    \"quantity\": -21736607.3814667,\n    \"unit\": \"esse sit reprehenderit\"\n   },\n   {\n    \"quantity\": 89491860.6606245,\n    \"unit\": \"in eiusmod Duis elit\"\n   }\n  ],\n  \"order\": -98210660,\n  \"purchased_products_together\": [\n   \"incididunt cupida\",\n   \"reprehenderit laboris\"\n  ],\n  \"purchased_products_together_objects\": [\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   },\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   }\n  ],\n  \"related_products\": [\n   \"ullamco voluptate ea\",\n   \"Lorem qui\"\n  ],\n  \"related_products_objects\": [\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   },\n   {\n    \"value\": \"<Circular reference to #/components/schemas/model.Product detected>\"\n   }\n  ],\n  \"short_description\": \"et est dolor\",\n  \"slug\": \"eu\",\n  \"status\": true,\n  \"tag\": [\n   \"dolor ad cillum\",\n   \"ullamco veniam\"\n  ],\n  \"updated_at\": \"deserunt ad aliquip in\"\n },\n \"message\": \"cupidatat\",\n \"success\": false\n}"
+						},
+						{
+							"name": "Not Acceptable",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category_code\": \"<string>\",\n    \"name\": \"<string>\",\n    \"supplier\": {\n        \"code\": \"reprehenderit Duis\",\n        \"name\": \"adipisicing sint tempor velit laborum\"\n    },\n    \"unit\": {\n        \"factor\": 71888656.87618673,\n        \"primary_unit\": \"sed minim deserunt nostrud\",\n        \"secondary_unit\": \"ut dolo\"\n    },\n    \"criteria\": [\n        {\n            \"name\": \"sint enim\",\n            \"url\": \"eiusmod esse id\"\n        },\n        {\n            \"name\": \"ut cons\",\n            \"url\": \"amet\"\n        }\n    ],\n    \"description\": \"<string>\",\n    \"image\": {\n        \"detail_url\": \"mollit ad\",\n        \"listing_url\": \"occaecat sunt culpa\",\n        \"name\": \"proident velit reprehenderit aute\",\n        \"thumbnail_url\": \"\"\n    },\n    \"images\": [\n        {\n            \"detail_url\": \"consequat elit eiu\",\n            \"listing_url\": \"Excepteur\",\n            \"name\": \"do aliqua est Ut consectetur\",\n            \"thumbnail_url\": \"dolor esse velit laboris\"\n        },\n        {\n            \"detail_url\": \"aliqua cillum dolor eiusmod cupidatat\",\n            \"listing_url\": \"adipisicing reprehenderit in incididunt occaecat\",\n            \"name\": \"Lorem irure velit labore nostrud\",\n            \"thumbnail_url\": \"laborum consectetur dolor\"\n        }\n    ],\n    \"keywords\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"options\": [\n        {\n            \"quantity\": 74689673.86302009,\n            \"unit\": \"dolor labore quis nostrud\"\n        },\n        {\n            \"quantity\": -23497618.726612672,\n            \"unit\": \"sunt Duis officia\"\n        }\n    ],\n    \"order\": \"<integer>\",\n    \"purchased_products_together\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"related_products\": [\n        \"<string>\",\n        \"<string>\"\n    ],\n    \"short_description\": \"<string>\",\n    \"slug\": \"<string>\",\n    \"status\": \"<boolean>\",\n    \"tag\": [\n        \"<string>\",\n        \"<string>\"\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "units",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Update unit by id",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) id of unit"
+										}
+									]
+								},
+								"description": "update information for unit"
+							},
+							"response": [
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Conflict",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": 72577767,\n \"data\": {\n  \"name\": \"adipisicing aliqua cillum\",\n  \"created_at\": \"consectetur sint dolore\",\n  \"id\": \"ut\",\n  \"updated_at\": \"culpa et deserunt\"\n },\n \"message\": \"aliqua in occaecat\",\n \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update unit by id",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units/:id/status",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units",
+										":id",
+										"status"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) id of unit"
+										}
+									]
+								},
+								"description": "update information for unit"
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "Not Acceptable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Acceptable",
+									"code": 406,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": {
+													"content": "Added as a part of security scheme: apikey",
+													"type": "text/plain"
+												},
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"status\": \"<boolean>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/units/:id/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"units",
+												":id",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Filter users and paging",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/units?top=<string>&page=<integer>&page_size=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"units"
+							],
+							"query": [
+								{
+									"key": "top",
+									"value": "<string>",
+									"description": "search  by code or name"
+								},
+								{
+									"key": "page",
+									"value": "<integer>",
+									"description": "page number for unit"
+								},
+								{
+									"key": "page_size",
+									"value": "<integer>",
+									"description": "page size each page"
+								}
+							]
+						},
+						"description": "filter list user and paging filtered"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/units?top=<string>&page=<integer>&page_size=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units"
+									],
+									"query": [
+										{
+											"key": "top",
+											"value": "<string>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										},
+										{
+											"key": "page_size",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -39493465,\n \"data\": [\n  {\n   \"name\": \"ea irure\",\n   \"created_at\": \"officia quis ex deserun\",\n   \"id\": \"consectetur proident nulla Excepteur ex\",\n   \"updated_at\": \"minim ip\"\n  },\n  {\n   \"name\": \"in ad\",\n   \"created_at\": \"eu dolore\",\n   \"id\": \"dolor labore\",\n   \"updated_at\": \"qui proident ullamco eu\"\n  }\n ],\n \"message\": \"qui Lorem sint\",\n \"page\": 18026259,\n \"page_size\": 42556310,\n \"success\": true,\n \"total\": 73368818\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Unit",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/units",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"units"
+							]
+						},
+						"description": "create new Unit"
+					},
+					"response": [
+						{
+							"name": "Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": 72577767,\n \"data\": {\n  \"name\": \"adipisicing aliqua cillum\",\n  \"created_at\": \"consectetur sint dolore\",\n  \"id\": \"ut\",\n  \"updated_at\": \"culpa et deserunt\"\n },\n \"message\": \"aliqua in occaecat\",\n \"success\": true\n}"
+						},
+						{
+							"name": "Not Acceptable",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": {
+											"content": "Added as a part of security scheme: apikey",
+											"type": "text/plain"
+										},
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/units",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"units"
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": -86571339,\n \"message\": \"sed\",\n \"success\": true\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
